@@ -1,0 +1,9 @@
+                      precision    recall  f1-score   support
+
+            original       0.72      0.88      0.79      1700
+internet-transmitted       0.88      0.66      0.76      1700
+        re-digitized       0.93      0.96      0.95      1700
+
+            accuracy                           0.83      5100
+           macro avg       0.85      0.83      0.83      5100
+        weighted avg       0.85      0.83      0.83      5100

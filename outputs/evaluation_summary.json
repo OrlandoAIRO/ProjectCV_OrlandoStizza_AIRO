@@ -1,0 +1,9 @@
+{
+  "overall_real_fake_accuracy": 0.9529411764705882,
+  "overall_transform_accuracy": 0.8329411764705882,
+  "transform_accuracy": {
+    "original": 0.9464705882352941,
+    "transfer": 0.961764705882353,
+    "redigital": 0.9505882352941176
+  }
+}

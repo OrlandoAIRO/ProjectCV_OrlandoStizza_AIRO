@@ -1,0 +1,7 @@
+transform,class,accuracy
+original,real,0.9729411764705882
+original,fake,0.92
+transfer,real,0.971764705882353
+transfer,fake,0.951764705882353
+redigital,real,0.96
+redigital,fake,0.9411764705882353

@@ -1,0 +1,19 @@
+Index size: 53999
+Split distribution:
+split
+test     50999
+train     2500
+val        500
+Transform distribution:
+transform
+original     20000
+transfer     17000
+redigital    16999
+Real/Fake distribution:
+real_fake
+fake    27000
+real    26999
+
+Train size: 35695
+Val size: 10199
+Test size: 5100
