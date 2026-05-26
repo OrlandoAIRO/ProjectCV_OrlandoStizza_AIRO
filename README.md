@@ -67,15 +67,9 @@ The project also includes unimodal baselines, implemented by setting one task we
 
 The metrics used mainly are accuracy, balanced accuracy, macro F1 and joint correctness.
 
-## 4.1. Current experimental protocol
+## 5. Key idea
 
-The current notebook version uses `MULTITASK_TRAIN = True` so that the multi-task branch is trained and validated on a split that includes all transformation classes. The official RRDataset_final split remains available as a benchmark-style evaluation option, but it is no longer the default training regime for the transformation task.
-
-This change is important because it prevents the transformation head from collapsing to the single class we saw during training.
-
-## 5. Key implementation ideas
-
-The following snippets capture the core logic of the project.
+These lines summarize the architecture, the training objective, and the model-selection criterion.
 
 ```python
 features = self.backbone(x)
@@ -91,11 +85,7 @@ total_loss = w_real * loss_real + w_transform * loss_transform
 score = 0.5 * (val_metrics["real_acc"] + val_metrics["trans_acc"])
 ```
 
-These lines summarize the architecture, the training objective, and the model-selection criterion.
-
 ## 6. Outputs
-
-All outputs are written to the outputs directory. The most important artifacts are:
 
 - best_model.pth: checkpoint of the best validation model.
 - history_*.csv: training curves for loss and accuracy.
@@ -108,9 +98,7 @@ All outputs are written to the outputs directory. The most important artifacts a
 - confusion_real_fake.png and confusion_transform.png: confusion matrices.
 - figures/: polished plots intended for the written report.
 
-## 6.1. Current results snapshot
-
-The latest run produces the following headline metrics:
+## 6.1. Results
 
 - real/fake accuracy: about 0.953
 - transformation accuracy: about 0.833
