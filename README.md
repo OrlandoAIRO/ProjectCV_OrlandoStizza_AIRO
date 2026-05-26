@@ -85,40 +85,23 @@ total_loss = w_real * loss_real + w_transform * loss_transform
 score = 0.5 * (val_metrics["real_acc"] + val_metrics["trans_acc"])
 ```
 
-## 6. Outputs
-
-- best_model.pth: checkpoint of the best validation model.
-- history_*.csv: training curves for loss and accuracy.
-- dataset_summary.txt: class and split statistics.
-- samples_train.png, samples_val.png, samples_test.png: qualitative sanity-check figures.
-- evaluation_summary.json: compact JSON summary of the final metrics.
-- report_real_fake.txt and report_transform.txt: detailed classification reports.
-- cross_class_accuracy.csv: real/fake accuracy broken down by transformation and class.
-- redigital_method_accuracy.csv: optional per-method analysis for re-digitization variants.
-- confusion_real_fake.png and confusion_transform.png: confusion matrices.
-- figures/: polished plots intended for the written report.
-
-## 6.1. Results
+## 6. Results
 
 - real/fake accuracy: about 0.953
 - transformation accuracy: about 0.833
 - real/fake macro F1: about 0.95
 - transformation macro F1: about 0.83
 
-The binary detector is therefore already strong and balanced, while the transformation classifier is good but still more difficult, especially for the internet-transmitted class.
+The binary detector is therefore already strong, while the transformation classifier is good but still more difficult, especially for the internet-transmitted class.
 
 ## 7. How to run
 
 1. Open CV_OrlandoStizza_Project2.ipynb
 2. Make sure the dataset is available under Dataset/ either as extracted folders or as the original archives.
 3. Review the Globals cell and choose the desired execution mode.
-4. Run the notebook top to bottom.
 
-The notebook is ready to run as long as it is executed from the repository root and the folder structure is preserved.
-
-The most relevant settings are RUN_FULL, SUBSET_PER_GROUP, USE_OFFICIAL_TEST, EPOCHS, BATCH_SIZE, and IMAGE_SIZE. For a full experiment, larger image size and more epochs are appropriate. For a fast test, the notebook can be reduced to a small balanced subset.
-
-Suggested full-run values depend on the available hardware, but a reasonable starting point is:
+The most relevant settings are RUN_FULL, SUBSET_PER_GROUP, USE_OFFICIAL_TEST, EPOCHS, BATCH_SIZE, and IMAGE_SIZE. 
+Suggested setup:
 
 ```python
 EPOCHS = 5
