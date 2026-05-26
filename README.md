@@ -51,7 +51,7 @@ Train. Baseline runs, joint multi-task optimization, and optional ablation over 
 
 Evaluation. Overall metrics, classification reports, confusion matrices, and cross-class analysis.
 
-Plots & Reporting. Report-ready figures saved to disk for inclusion in the written report.
+Plots & Reporting
 
 ## 4. Methodology
 
@@ -63,7 +63,7 @@ $$
 
 The corresponding class probabilities are obtained with a softmax layer. Training is performed with AdamW, which is well suited to transfer learning because it combines adaptive optimization with decoupled weight decay.
 
-The project also includes unimodal baselines, implemented by setting one task weight to zero. This is useful because it gives a direct reference point for understanding whether joint training helps or hurts each task.
+The project also includes unimodal baselines, implemented by setting one task weight to zero.
 
 The notebook evaluates the model using multiple complementary metrics rather than relying on accuracy alone. In particular, it reports overall accuracy, balanced accuracy, macro F1, joint correctness, and task-specific reports. It also breaks down real/fake accuracy by transformation type to answer the core forensic question: which distortions damage detection performance the most?
 
