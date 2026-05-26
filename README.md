@@ -65,7 +65,7 @@ The corresponding class probabilities are obtained with a softmax layer. Trainin
 
 The project also includes unimodal baselines, implemented by setting one task weight to zero.
 
-The notebook evaluates the model using multiple complementary metrics rather than relying on accuracy alone. In particular, it reports overall accuracy, balanced accuracy, macro F1, joint correctness, and task-specific reports. It also breaks down real/fake accuracy by transformation type to answer the core forensic question: which distortions damage detection performance the most?
+It reports accuracy, balanced accuracy, macro F1, joint correctness, and task-specific reports. It also breaks down real/fake accuracy by transformation type to answer the core forensic question: which distortions damage detection performance the most?
 
 ## 4.1. Current experimental protocol
 
