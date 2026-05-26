@@ -37,21 +37,17 @@ The project uses RRDataset from the Zenodo benchmark "Bridging the Gap Between I
 
 ## 3. Pipeline
 
-Imports. Dependencies and vision libraries.
+1. Imports & Dependencies
 
-Globals. Paths, seeds, hyperparameters, and run flags.
+2. Global Variables Initialization
 
-Utils. Archive extraction, label inference, balanced sampling, and helper routines.
+3. Helper Functions
 
-Data. Dataset indexing, split construction, transformations, loaders, and sample visualization.
+4. Dataset Analysis
 
-Network. Shared CNN backbone with two task-specific classification heads.
+5. CNN Architecture
 
-Train. Baseline runs, joint multi-task optimization, and optional ablation over loss weights.
-
-Evaluation. Overall metrics, classification reports, confusion matrices, and cross-class analysis.
-
-Plots & Reporting
+6. Training & Evalutation
 
 ## 4. Methodology
 
