@@ -31,29 +31,9 @@ $$
 \mathcal{L} = \lambda_{rf} \mathcal{L}_{rf} + \lambda_{tr} \mathcal{L}_{tr}
 $$
 
-This design lets the model learn both forensic tasks simultaneously while sharing visual features that may be useful for one task, the other, or both.
-
 ## 2. Dataset
 
-The project uses RRDataset from the Zenodo benchmark "Bridging the Gap Between Ideal and Real-world Evaluation: Benchmarking AI-Generated Image Detection in Challenging Scenarios". The benchmark is specifically relevant because it does not only contain clean, idealized images; instead it models the kind of degradations that appear in realistic online circulation.
-
-The notebook supports the following structure:
-
-Dataset/RRDataset/RRDataset_original_train_val/
-  train/ai
-  train/real
-  val/ai
-  val/real
-
-Dataset/RRDataset/RRDataset_final/
-  original/ai
-  original/real
-  transfer/ai
-  transfer/real
-  redigital/ai
-  redigital/real
-
-The data loader infers labels from folder names and file paths. This keeps the notebook simple to run, but it also means the directory naming convention must remain consistent with the RRDataset layout.
+The project uses RRDataset from the Zenodo benchmark "Bridging the Gap Between Ideal and Real-world Evaluation: Benchmarking AI-Generated Image Detection in Challenging Scenarios". The benchmark is relevant because it models the kind of degradations that appear in realistic online circulation.
 
 ## 3. Pipeline
 
